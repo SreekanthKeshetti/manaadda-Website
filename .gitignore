@@ -1,0 +1,14 @@
+# Dependencies (Don't upload heavy node_modules!)
+node_modules
+
+# Build output
+dist
+dist-ssr
+
+# Local environment variables
+.env
+.env.local
+
+# Operating System files
+.DS_Store
+Thumbs.db
