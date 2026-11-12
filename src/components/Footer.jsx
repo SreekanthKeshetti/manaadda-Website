@@ -23,8 +23,11 @@ export const Footer = () => {
               <div className="w-10 h-10 rounded-xl bg-brand-orange text-white font-black text-xl hidden items-center justify-center">
                 M
               </div>
-              <span className="font-display text-2xl font-extrabold">
+              <span className="font-display text-2xl font-extrabold flex items-center">
                 ManaAdda
+                <sup className="text-[10px] font-bold text-brand-gold ml-0.5 -top-2">
+                  ™
+                </sup>
               </span>
             </div>
             <p className="text-xs text-warm-gray-light leading-relaxed">
@@ -32,7 +35,7 @@ export const Footer = () => {
               infrastructure across India.
             </p>
 
-            {/* NextMetaForce Parent Company Branding (Cleaned: No Consulting LLP) */}
+            {/* NextMetaForce Parent Company Branding */}
             <div className="pt-2">
               <p className="text-xs text-warm-gray-light font-medium">
                 Powered By
@@ -150,9 +153,13 @@ export const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Legal Copy (Cleaned: NextMetaForce) */}
+        {/* Bottom Legal Copy with Formal Trademark Notice */}
         <div className="pt-8 border-t border-warm-dark-2 flex flex-col sm:flex-row justify-between items-center text-xs text-warm-gray-light font-medium gap-4">
-          <p>© 2026 NextMetaForce. All rights reserved. Made in Hyderabad 🇮🇳</p>
+          <p>
+            © {new Date().getFullYear()} NextMetaForce. Mana Adda™ is a
+            trademark of NextMetaForce. All rights reserved. Made in Hyderabad
+            🇮🇳
+          </p>
           <div className="flex gap-6">
             <a
               href="/privacy.html"
