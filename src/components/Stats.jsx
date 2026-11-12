@@ -18,7 +18,7 @@ const AnimatedCounter = ({
     const stepTime = duration / steps;
     const increment = (end - start) / steps;
 
-    setCount(0); // Reset count to zero before rolling up
+    setCount(0);
 
     const timer = setInterval(() => {
       start += increment;
@@ -46,17 +46,18 @@ export const Stats = () => {
   const { ref, inView } = useInView({ threshold: 0.2 });
   const [triggerKey, setTriggerKey] = useState(0);
 
-  // Automatically re-trigger counter every 10 seconds while visible
+  // Automatically re-trigger counter every 12 seconds while visible
   useEffect(() => {
     if (!inView) return;
 
     const interval = setInterval(() => {
       setTriggerKey((prev) => prev + 1);
-    }, 10000);
+    }, 12000);
 
     return () => clearInterval(interval);
   }, [inView]);
 
+  // Neutral, professional metric labels with zero confrontational phrasing
   const stats = [
     {
       target: 31,
@@ -70,15 +71,15 @@ export const Stats = () => {
       decimals: 0,
       suffix: "%",
       label: "Direct EOD UPI Settlement",
-      desc: "Zero Cash Delays or Deductions",
+      desc: "Instant Evening Transfers",
     },
     {
       target: 0,
       decimals: 0,
       prefix: "₹",
       suffix: "",
-      label: "Middleman Commission",
-      desc: "Direct Worker Empowerment",
+      label: "Hidden Deductions",
+      desc: "100% Direct Worker Payouts",
     },
     {
       target: 4.8,
@@ -94,14 +95,14 @@ export const Stats = () => {
       ref={ref}
       className="py-20 bg-warm-dark text-white relative overflow-hidden bg-grid-pattern-dark"
     >
-      {/* Top Laser Line */}
+      {/* Top Laser Accent Line */}
       <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-brand-gold to-transparent opacity-80" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Clean Live Ticker Header Badge */}
         <div className="flex items-center justify-center gap-2.5 mb-10 text-[10px] font-mono font-bold tracking-widest text-brand-gold uppercase bg-white/5 border border-white/10 w-fit mx-auto px-4 py-1.5 rounded-full shadow-inner">
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-          <span>LIVE TICKER • AUTO-REFRESHING REAL TIME</span>
+          <span>LIVE ECOSYSTEM METRICS TICKER</span>
         </div>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 divide-y sm:divide-y-0 divide-warm-dark-2">

@@ -172,12 +172,12 @@ export const Features = () => {
               </h4>
               <p className="text-sm text-warm-gray-light leading-relaxed max-w-xl">
                 Every verified morning check-in automatically activates full
-                ₹2,00,000 accidental cover (Acko / Digit Partnership),
-                safeguarding daily wage families against workplace hazards.
+                accidental cover , safeguarding daily wage families against
+                workplace hazards.
               </p>
             </div>
             <div className="flex items-center gap-4 text-xs font-bold text-blue-400">
-              <span>✓ ₹2,00,000 Accidental Protection</span>
+              <span>✓ Accidental Protection</span>
               <span>✓ Absorbed By Platform</span>
             </div>
           </motion.div>

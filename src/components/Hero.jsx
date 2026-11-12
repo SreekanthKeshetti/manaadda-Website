@@ -1,26 +1,28 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   ShieldCheck,
   MapPin,
   IndianRupee,
   CheckCircle2,
   ArrowRight,
+  Play,
+  X,
+  Zap,
 } from "lucide-react";
 
 export const Hero = () => {
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+
   return (
     <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden bg-grid-pattern">
-      {/* --- ELEGANT 1px AMBIENT SHIMMER LINES (NO BUBBLES) --- */}
+      {/* --- ELEGANT 1px AMBIENT SHIMMER LINES --- */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
-        {/* Subtle Horizontal 1px Line Glide */}
         <motion.div
           animate={{ x: ["-100%", "100%"] }}
           transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
           className="absolute top-[32%] left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-brand-orange/30 to-transparent"
         />
-
-        {/* Subtle Vertical 1px Line Glide */}
         <motion.div
           animate={{ y: ["-100%", "100%"] }}
           transition={{
@@ -53,7 +55,8 @@ export const Hero = () => {
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
               </span>
               <span className="text-xs font-extrabold text-warm-dark tracking-wide uppercase">
-                Now Live on Google Play & App Store
+                {/* Now Live on Google Play & App Store */}
+                Now Live on App Store
               </span>
             </div>
 
@@ -67,12 +70,12 @@ export const Hero = () => {
             <p className="text-lg sm:text-xl text-warm-gray font-medium max-w-2xl leading-relaxed mx-auto lg:mx-0">
               Transforming informal daily wage employment with{" "}
               <strong className="text-warm-dark font-bold">
-                1-tap GPS attendance proof
+                1-tap attendance
               </strong>
-              ,{" "}
+              {/* ,{" "}
               <strong className="text-warm-dark font-bold">
                 Razorpay escrow safety
-              </strong>
+              </strong> */}
               , and direct{" "}
               <strong className="text-warm-dark font-bold">
                 End-of-Day (EOD) UPI payouts
@@ -80,19 +83,19 @@ export const Hero = () => {
               to GPay & PhonePe.
             </p>
 
-            {/* Telugu Core Tagline Callout */}
+            {/* Telugu Core Tagline Callout (Positive, Solution-Focused) */}
             <div className="p-4 rounded-2xl bg-warm-bg2/80 border border-warm-border/80 inline-block text-left shadow-sm">
               <p className="text-sm font-bold text-brand-orange-dark flex items-center gap-2">
                 <span>🔥</span> "మన పని. మన భద్రత. మన పైసా."
               </p>
               <p className="text-xs font-semibold text-warm-gray mt-0.5">
-                (Our Work. Our Safety. Our Money.) — Zero middleman
-                exploitation.
+                (Our Work. Our Safety. Our Money.) — Direct Connections. 100%
+                Transparent Pay.
               </p>
             </div>
 
             {/* CTA Button Group */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
               <a
                 href="https://play.google.com/store/apps/details?id=com.manaadda.app"
                 target="_blank"
@@ -110,22 +113,15 @@ export const Hero = () => {
                 </div>
               </a>
 
-              <a
-                href="https://apps.apple.com/app/mana-adda/id6788304417"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-7 py-4 rounded-2xl bg-white border border-warm-border text-warm-dark font-extrabold text-base hover:bg-warm-bg2 shadow-md transition-all active:scale-95"
+              <button
+                onClick={() => setIsVideoModalOpen(true)}
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-2xl bg-white border-2 border-brand-orange text-brand-orange-dark font-extrabold text-sm hover:bg-brand-orange hover:text-white shadow-md transition-all active:scale-95 group"
               >
-                <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
-                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.32c.64-.78 1.08-1.85.96-2.92-.93.04-2.06.62-2.73 1.4-.6.69-1.13 1.79-.99 2.85 1.05.08 2.12-.55 2.76-1.33z" />
-                </svg>
-                <div className="text-left leading-tight">
-                  <div className="text-[10px] uppercase font-bold text-warm-gray">
-                    Download on the
-                  </div>
-                  <div className="text-sm font-extrabold">App Store</div>
+                <div className="w-7 h-7 rounded-full bg-brand-orange text-white group-hover:bg-white group-hover:text-brand-orange flex items-center justify-center transition-colors">
+                  <Play size={14} fill="currentColor" />
                 </div>
-              </a>
+                <span>Watch 1-Min Demo</span>
+              </button>
 
               <a
                 href="https://labouradda-monorepo.vercel.app"
@@ -138,27 +134,27 @@ export const Hero = () => {
               </a>
             </div>
 
-            {/* Trust Badges */}
+            {/* Elevated Pill-Shaped Trust Badges */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 border-t border-warm-border/80 text-left">
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 p-2 rounded-xl bg-white/70 border border-warm-border/60 shadow-xs">
                 <CheckCircle2 size={16} className="text-emerald-600 shrink-0" />
                 <span className="text-xs font-bold text-warm-dark">
                   KYC Verified
                 </span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 p-2 rounded-xl bg-white/70 border border-warm-border/60 shadow-xs">
                 <CheckCircle2 size={16} className="text-emerald-600 shrink-0" />
                 <span className="text-xs font-bold text-warm-dark">
-                  GPS Attendance
+                  One-tap Attendance
                 </span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 p-2 rounded-xl bg-white/70 border border-warm-border/60 shadow-xs">
                 <CheckCircle2 size={16} className="text-emerald-600 shrink-0" />
                 <span className="text-xs font-bold text-warm-dark">
                   Direct EOD Pay
                 </span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 p-2 rounded-xl bg-white/70 border border-warm-border/60 shadow-xs">
                 <CheckCircle2 size={16} className="text-emerald-600 shrink-0" />
                 <span className="text-xs font-bold text-warm-dark">
                   Free Shift Insurance
@@ -202,14 +198,15 @@ export const Hero = () => {
                       ManaAdda
                     </span>
                   </div>
-                  <span className="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-extrabold text-[10px]">
+                  <span className="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-extrabold text-[10px] flex items-center gap-1">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>{" "}
                     LIVE
                   </span>
                 </div>
 
                 {/* Simulated Screen Content Body */}
                 <div className="p-4 space-y-3 flex-1 overflow-hidden bg-warm-bg">
-                  {/* Worker Card Preview */}
+                  {/* Worker Batch Card: Synchronized to ₹1,000/day */}
                   <div className="p-3.5 rounded-2xl bg-white border border-warm-border shadow-sm space-y-2">
                     <div className="flex justify-between items-start">
                       <div>
@@ -220,45 +217,46 @@ export const Hero = () => {
                           Masonry & Slab Work
                         </h4>
                       </div>
-                      <span className="text-xs font-black text-emerald-600 bg-emerald-50 px-2 py-1 rounded-lg">
-                        ₹750/day
+                      <span className="text-xs font-black text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-200">
+                        ₹1,000/day
                       </span>
                     </div>
 
                     <div className="flex items-center gap-1.5 text-[10px] font-bold text-warm-gray">
                       <MapPin size={11} className="text-brand-orange" />
-                      <span>Jubilee Hills Check Post Adda</span>
+                      <span>Road No. 36, Jubilee Hills Adda</span>
                     </div>
 
                     <div className="pt-2 border-t border-warm-border flex justify-between items-center text-[10px] font-extrabold">
                       <span className="text-emerald-700 flex items-center gap-1">
-                        <CheckCircle2 size={12} /> 4 / 5 Workers Checked In
+                        <CheckCircle2 size={12} /> 5 / 5 Workers GPS Verified
                       </span>
                       <span className="text-warm-dark">9:00 AM</span>
                     </div>
                   </div>
 
-                  {/* Simulated EOD Escrow Status Card */}
+                  {/* Escrow Status Card: Synchronized to ₹5,000 (5 Workers × ₹1,000) */}
                   <div className="p-3.5 rounded-2xl bg-warm-dark text-white space-y-2 shadow-md">
                     <div className="flex justify-between items-center text-[10px] text-warm-gray-light font-bold">
-                      <span>RAZORPAY ESCROW VAULT</span>
-                      <span className="text-emerald-400 font-extrabold">
-                        PROTECTED
+                      {/* <span>RAZORPAY ESCROW VAULT</span> */}
+                      <span className="text-emerald-400 font-extrabold flex items-center gap-1">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>{" "}
+                        SECURED
                       </span>
                     </div>
                     <div className="text-lg font-black tracking-tight text-white flex items-center justify-between">
-                      <span>₹3,000 Securing Batch</span>
+                      <span>₹5,000 Locked (5 Workers)</span>
                       <ShieldCheck size={18} className="text-emerald-400" />
                     </div>
                     <p className="text-[9px] text-warm-gray-light leading-tight">
-                      Funds auto-disburse directly to worker UPI handles at 9:00
-                      PM tonight.
+                      Pre-funded shift wages released directly to worker UPI IDs
+                      at 9:00 PM tonight.
                     </p>
                   </div>
                 </div>
               </div>
 
-              {/* Floating Glass Card 1 */}
+              {/* Floating Dynamic Badge: Synchronized to ₹1,000 Credited */}
               <motion.div
                 animate={{ y: [0, -8, 0] }}
                 transition={{
@@ -276,12 +274,12 @@ export const Hero = () => {
                     Direct UPI Payout
                   </div>
                   <div className="text-xs font-black text-warm-dark">
-                    ₹650 Credited to GPay
+                    ₹1,000 Credited to GPay
                   </div>
                 </div>
               </motion.div>
 
-              {/* Floating Glass Card 2 */}
+              {/* Floating Dynamic Badge 2: Free Insurance */}
               <motion.div
                 animate={{ y: [0, 8, 0] }}
                 transition={{
@@ -300,7 +298,7 @@ export const Hero = () => {
                     Free Shift Protection
                   </div>
                   <div className="text-xs font-black text-warm-dark">
-                    ₹2,00,000 Acko Cover
+                    ₹2,00,000 Insurance Cover
                   </div>
                 </div>
               </motion.div>
@@ -308,6 +306,64 @@ export const Hero = () => {
           </motion.div>
         </div>
       </div>
+
+      {/* --- POPUP VIDEO MODAL PLAYER --- */}
+      <AnimatePresence>
+        {isVideoModalOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setIsVideoModalOpen(false)}
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-warm-dark/80 backdrop-blur-md cursor-pointer"
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              onClick={(e) => e.stopPropagation()}
+              className="relative w-full max-w-4xl bg-warm-dark rounded-3xl overflow-hidden shadow-2xl border border-white/10 cursor-default"
+            >
+              {/* Close Button */}
+              <button
+                onClick={() => setIsVideoModalOpen(false)}
+                className="absolute top-4 right-4 z-20 p-2 rounded-full bg-black/60 hover:bg-black text-white transition-colors border border-white/20"
+              >
+                <X size={20} />
+              </button>
+
+              {/* Video Element Player with Fallback Preview */}
+              <div className="aspect-video w-full bg-black flex items-center justify-center relative">
+                <video
+                  src="/demo.mp4"
+                  controls
+                  autoPlay
+                  className="w-full h-full object-contain"
+                  onError={(e) => {
+                    e.target.style.display = "none";
+                    if (e.target.nextSibling) {
+                      e.target.nextSibling.style.display = "flex";
+                    }
+                  }}
+                />
+                <div className="hidden flex-col items-center justify-center p-8 text-center text-white space-y-3">
+                  <div className="w-16 h-16 rounded-full bg-brand-orange/20 text-brand-orange flex items-center justify-center">
+                    <Play size={32} />
+                  </div>
+                  <h3 className="font-display font-bold text-2xl">
+                    Mana Adda App Demo
+                  </h3>
+                  <p className="text-xs text-warm-gray-light max-w-md">
+                    Place your marketing video file at{" "}
+                    <code className="text-brand-gold">public/demo.mp4</code> to
+                    watch the live walkthrough!
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };

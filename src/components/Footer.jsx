@@ -15,7 +15,9 @@ export const Footer = () => {
                 className="w-10 h-10 rounded-xl object-contain bg-white p-0.5 border border-warm-dark-2 shadow-md"
                 onError={(e) => {
                   e.target.style.display = "none";
-                  e.target.nextSibling.style.display = "flex";
+                  if (e.target.nextSibling) {
+                    e.target.nextSibling.style.display = "flex";
+                  }
                 }}
               />
               <div className="w-10 h-10 rounded-xl bg-brand-orange text-white font-black text-xl hidden items-center justify-center">
@@ -30,7 +32,7 @@ export const Footer = () => {
               infrastructure across India.
             </p>
 
-            {/* Clickable NextMetaForce Parent Company Branding */}
+            {/* NextMetaForce Parent Company Branding (Cleaned: No Consulting LLP) */}
             <div className="pt-2">
               <p className="text-xs text-warm-gray-light font-medium">
                 Powered By
@@ -41,7 +43,7 @@ export const Footer = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 text-sm font-extrabold text-brand-gold hover:text-brand-gold-light hover:underline transition-colors mt-0.5"
               >
-                <span>NextMetaForce Consulting LLP</span>
+                <span>NextMetaForce</span>
                 <ExternalLink size={12} />
               </a>
             </div>
@@ -148,12 +150,9 @@ export const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Legal Copy */}
+        {/* Bottom Legal Copy (Cleaned: NextMetaForce) */}
         <div className="pt-8 border-t border-warm-dark-2 flex flex-col sm:flex-row justify-between items-center text-xs text-warm-gray-light font-medium gap-4">
-          <p>
-            © 2026 NextMetaForce Consulting LLP. All rights reserved. Made in
-            Hyderabad 🇮🇳
-          </p>
+          <p>© 2026 NextMetaForce. All rights reserved. Made in Hyderabad 🇮🇳</p>
           <div className="flex gap-6">
             <a
               href="/privacy.html"

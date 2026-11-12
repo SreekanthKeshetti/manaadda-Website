@@ -12,3 +12,6 @@ dist-ssr
 # Operating System files
 .DS_Store
 Thumbs.db
+# Ignore large video files
+*.mp4
+*.mov

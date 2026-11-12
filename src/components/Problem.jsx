@@ -1,11 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  XCircle,
-  CheckCircle2,
-  AlertTriangle,
-  ShieldCheck,
-} from "lucide-react";
+import { XCircle, CheckCircle2, Clock, ShieldCheck } from "lucide-react";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
 export const Problem = () => {
@@ -17,21 +12,21 @@ export const Problem = () => {
         {/* Section Title */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <h2 className="text-xs font-black text-brand-orange uppercase tracking-widest">
-            THE UNORGANIZED SECTOR REINVENTED
+            WORKFORCE INFRASTRUCTURE REDEFINED
           </h2>
           <h3 className="font-display text-3xl sm:text-5xl font-extrabold text-warm-dark tracking-tight">
-            Why Traditional Labour Addas Are Broken.
+            The Traditional System, Upgraded.
           </h3>
           <p className="text-base sm:text-lg text-warm-gray font-medium">
-            For decades, millions of informal daily wage workers suffered from
-            exploitation, payment uncertainties, and zero safety nets. Mana Adda
-            changes everything.
+            Moving daily wage employment from manual, unpredictable street
+            stands to a structured digital ecosystem with guaranteed payments
+            and safety.
           </p>
         </div>
 
         {/* Side-by-Side Comparison */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-stretch">
-          {/* Card 1: The Old Way (Red / Dark Theme) */}
+          {/* Card 1: The Traditional Way */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
@@ -39,62 +34,73 @@ export const Problem = () => {
             className="p-8 sm:p-10 rounded-3xl bg-warm-dark text-white space-y-6 flex flex-col justify-between shadow-xl border border-warm-dark-2 relative overflow-hidden"
           >
             <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 text-xs font-extrabold uppercase tracking-wider">
-                <AlertTriangle size={14} /> Traditional Labour Addas
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/10 text-warm-gray-light text-xs font-extrabold uppercase tracking-wider">
+                <Clock size={14} /> Traditional Manual Stand
               </div>
 
               <h4 className="font-display text-2xl sm:text-3xl font-bold text-white">
-                The Exploitative Street Stand
+                Manual & Unpredictable Hiring
               </h4>
 
               <ul className="space-y-4 text-sm font-medium text-warm-gray-light">
                 <li className="flex items-start gap-3">
-                  <XCircle size={18} className="text-red-400 shrink-0 mt-0.5" />
+                  <XCircle
+                    size={18}
+                    className="text-amber-400 shrink-0 mt-0.5"
+                  />
                   <span>
                     <strong className="text-white">
-                      5:00 AM Street Stand Waiting:
+                      5:00 AM Street Waiting:
                     </strong>{" "}
-                    Standing in extreme heat/rain with zero guarantee of finding
-                    work.
+                    Standing in extreme heat or rain with uncertain shift
+                    availability.
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <XCircle size={18} className="text-red-400 shrink-0 mt-0.5" />
-                  <span>
-                    <strong className="text-white">Wage Exploitation:</strong>{" "}
-                    Middlemen cut 20% to 30% from the worker's hard-earned daily
-                    wage.
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <XCircle size={18} className="text-red-400 shrink-0 mt-0.5" />
+                  <XCircle
+                    size={18}
+                    className="text-amber-400 shrink-0 mt-0.5"
+                  />
                   <span>
                     <strong className="text-white">
-                      Cash Disputes & Non-Payment:
+                      Unstandardized Rates:
                     </strong>{" "}
-                    Contractors refusing evening payment with no legal or
-                    digital recourse.
+                    Unpredictable daily wage variances without pre-agreed terms.
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <XCircle size={18} className="text-red-400 shrink-0 mt-0.5" />
+                  <XCircle
+                    size={18}
+                    className="text-amber-400 shrink-0 mt-0.5"
+                  />
+                  <span>
+                    <strong className="text-white">Cash Friction:</strong>{" "}
+                    Evening cash handling delays and payment disputes with no
+                    digital record.
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <XCircle
+                    size={18}
+                    className="text-amber-400 shrink-0 mt-0.5"
+                  />
                   <span>
                     <strong className="text-white">
                       Zero Accidental Cover:
                     </strong>{" "}
-                    On-site injuries leave daily wage families completely
-                    bankrupt.
+                    On-site workplace incidents leave families financially
+                    vulnerable.
                   </span>
                 </li>
               </ul>
             </div>
 
-            <div className="pt-6 border-t border-warm-dark-2 text-xs font-bold text-red-400">
-              ❌ High Vulnerability • No Verification • Financial Risk
+            <div className="pt-6 border-t border-warm-dark-2 text-xs font-bold text-warm-gray-light">
+              ⚠️ Unpredictable Schedules • Manual Friction • No Safety Net
             </div>
           </motion.div>
 
-          {/* Card 2: The Mana Adda Way (White / Orange Theme) */}
+          {/* Card 2: The Mana Adda Way */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
@@ -103,7 +109,7 @@ export const Problem = () => {
           >
             <div className="space-y-6">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-orange/10 border border-brand-orange/30 text-brand-orange-dark text-xs font-extrabold uppercase tracking-wider">
-                <ShieldCheck size={14} /> The Mana Adda Digital Safety Net
+                <ShieldCheck size={14} /> The Mana Adda Digital Platform
               </div>
 
               <h4 className="font-display text-2xl sm:text-3xl font-bold text-warm-dark">
@@ -120,8 +126,8 @@ export const Problem = () => {
                     <strong className="text-warm-dark">
                       Book Shifts From Home:
                     </strong>{" "}
-                    Accept jobs real-time with verified wages before leaving
-                    your house.
+                    Accept jobs in real time with pre-verified daily wages
+                    before leaving your house.
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
@@ -131,10 +137,10 @@ export const Problem = () => {
                   />
                   <span>
                     <strong className="text-warm-dark">
-                      0% Middleman Exploitation:
+                      Pre-Agreed Transparent Terms:
                     </strong>{" "}
                     Direct contractor-to-worker connection with complete
-                    transparent ledger.
+                    transparent digital ledger.
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
@@ -143,9 +149,7 @@ export const Problem = () => {
                     className="text-emerald-600 shrink-0 mt-0.5"
                   />
                   <span>
-                    <strong className="text-warm-dark">
-                      Razorpay Escrow Vault:
-                    </strong>{" "}
+                    <strong className="text-warm-dark">EOD Payements:</strong>{" "}
                     Contractor funds locked before shift starts; direct EOD UPI
                     payout.
                   </span>
