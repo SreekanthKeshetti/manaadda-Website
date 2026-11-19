@@ -137,6 +137,10 @@ export const Footer = () => {
             <div className="space-y-2 text-xs text-warm-gray-light font-medium">
               <p className="flex items-center gap-2">
                 <Mail size={14} className="text-brand-orange" />
+                <span>manaadda.services@gmail.com</span>
+              </p>              
+              <p className="flex items-center gap-2">
+                <Mail size={14} className="text-brand-orange" />
                 <span>manaadda018@gmail.com</span>
               </p>
               <p className="flex items-start gap-2">

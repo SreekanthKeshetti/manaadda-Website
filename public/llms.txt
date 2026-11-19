@@ -1,0 +1,30 @@
+# Mana Adda™ — India's Daily Labour, Organized
+
+> Mana Adda™ is an on-demand blue-collar labor marketplace and digital infrastructure platform digitizing India's informal daily wage labor economy. Tagline: "మన పని. మన భద్రత. మన పైసా." (Our Work. Our Safety. Our Money.) Powered by NextMetaForce.
+
+## Core Value Proposition
+- **For Daily Wage Workers**: Browse nearby Adda jobs, receive GPS-verified check-ins, benefit from free accidental shift insurance, and get direct 100% end-of-day (EOD) UPI settlements to PhonePe, Google Pay, or Paytm. Zero middleman cuts.
+- **For Contractors & Builders**: Post daily batch labor requirements, ensure 100% site workforce arrival with GPS verification, lock shift wages in secure Razorpay Escrow, and download digital GST audit ledgers.
+- **Dual-Context Architecture**: Allows senior masons and workers to switch between Worker Mode (Laborer) and Hirer Mode (Contractor) in 1-tap without changing accounts.
+
+## Key Technical & Financial Safeguards
+- **1-Tap GPS Attendance**: Real-time native GPS verification cross-referenced with site pins to eliminate proxy disputes.
+- **Razorpay Escrow Vault**: Pre-funded batch wages safely locked before work begins and automatically disbursed at end of day.
+- **Direct EOD UPI Payouts**: Automated instant transfers straight to worker UPI accounts without cash friction.
+- **Free Shift Insurance**: Every morning check-in activates accidental insurance cover safeguarding daily wage families.
+
+## Hyderabad Geographic Coverage (31 Master Addas)
+- **Central & West**: Jubilee Hills Check Post, Yousufguda, Panjagutta, Ameerpet, Banjara Hills Rd 12, Tolichowki, Mehdipatnam.
+- **Cyberabad IT Corridor**: Gachibowli, Kondapur, Chanda Nagar, Lingampally, Miyapur, Kukatpally Y-Junction, Balanagar.
+- **Secunderabad Zone**: Secunderabad Station Kummarguda, Tarnaka, ECIL, Alwal, Suchitra Junction, Chintal.
+- **East & South-East**: LB Nagar, Dilsukhnagar, Uppal Ring Road, Nagole, Ramanthapur, Hastinapuram.
+- **Old City & South**: Koti Labour Adda, Charminar Gulzar Houz, Nampally Station, Santosh Nagar, Attapur Pillar 120.
+
+## Official App Links & Corporate Identity
+- **Website**: https://manaadda.com
+- **Google Play Store**: https://play.google.com/store/apps/details?id=com.manaadda.app
+- **Apple App Store**: https://apps.apple.com/app/mana-adda/id6788304417
+- **Web App**: https://labouradda-monorepo.vercel.app
+- **Parent Entity**: NextMetaForce
+- **Headquarters**: Gowra Palladium, HITEC City, Hyderabad, Telangana 500081, India.
+- **Official Contact**: manaadda018@gmail.com

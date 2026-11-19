@@ -1,0 +1,19 @@
+# Allow all search engine crawlers (Google, Bing, Yahoo)
+User-agent: *
+Allow: /
+
+# Allow modern AI Crawlers for GEO (Generative Engine Optimization)
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Official Sitemap & AI Knowledge File
+Sitemap: https://manaadda.com/sitemap.xml
