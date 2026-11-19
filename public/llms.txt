@@ -21,10 +21,10 @@
 - **Old City & South**: Koti Labour Adda, Charminar Gulzar Houz, Nampally Station, Santosh Nagar, Attapur Pillar 120.
 
 ## Official App Links & Corporate Identity
-- **Website**: https://manaadda.com
+- **Website**: https://manaaddaa.com
 - **Google Play Store**: https://play.google.com/store/apps/details?id=com.manaadda.app
 - **Apple App Store**: https://apps.apple.com/app/mana-adda/id6788304417
 - **Web App**: https://labouradda-monorepo.vercel.app
 - **Parent Entity**: NextMetaForce
 - **Headquarters**: Gowra Palladium, HITEC City, Hyderabad, Telangana 500081, India.
-- **Official Contact**: manaadda018@gmail.com
+- **Official Contact**: manaadda018@gmail.com,manaadda.services@gmail.com.
